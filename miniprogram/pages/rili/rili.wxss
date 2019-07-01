@@ -1,0 +1,87 @@
+/**index.wxss**/
+page{
+  height: 100%;
+}
+
+.other {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200rpx;
+  background: #ccc;
+  font-size: 30rpx;
+  color: #666;
+}
+
+.scroll-view-class{
+  width: 100%;
+  height: 60%;
+}
+
+.dataList-box{
+  background: #fff;
+  opacity: 0;
+  transition: all .3s;
+}
+
+.active{
+  opacity: 1;
+}
+
+.dataList-box .date-box{
+  display: flex;
+  justify-content: space-between;
+  padding: 16rpx 0;
+  border-bottom: 2rpx solid #F7F7F7;
+}
+
+.zhichu-box{
+  display: flex;
+}
+
+.dataList-box .date-box .date-box01,.dataList-box .date-box .date-box02{
+  font-size: 26rpx;
+  color: #B3B3B3;
+}
+
+.dataList-box .date-box .date-box01{
+  padding-left: 30rpx;
+}
+
+.dataList-box .date-box .date-box02{
+  padding-right: 30rpx;
+}
+
+.dataList-box .record{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 24rpx 0;
+  align-items: center;
+}
+
+.dataList-box .record .record-box01{
+  display: flex;
+  align-items: center;
+}
+
+.dataList-box .record .record-box01 text{
+  font-size: 28rpx;
+  padding-left: 30rpx;
+  color: #352302;
+}
+
+.dataList-box .record .record-box01 image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 40rpx;
+  box-shadow:-1px 2px 4px #C2C2C2;
+  border-radius: 50%;
+}
+
+.dataList-box .record .price{
+  font-size: 28rpx;
+  padding-right: 30rpx;
+  color: #352302;
+}

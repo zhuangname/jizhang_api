@@ -1,0 +1,43 @@
+<view>
+
+  <view class='listbox'>
+  
+    <text class='padding-L-20'>金额</text>
+
+    <text class='padding-R-20'>{{listData.dataList[options.index].prive}}</text>
+  
+  </view>
+
+  <view class='listbox'>
+  
+    <text class='padding-L-20'>类型</text>
+
+    <text class='padding-R-20'>{{listData.dataList[options.index].status == 1?"收入":"支出"}}</text>
+  
+  </view>
+
+  <view class='listbox'>
+  
+    <text class='padding-L-20'>日期</text>
+
+    <text class='padding-R-20'>{{listData.createdTime}}</text>
+  
+  </view>
+
+  <view class='listbox'>
+  
+    <text class='padding-L-20'>备注</text>
+
+    <text class='padding-R-20'>{{listData.dataList[options.index].remark}}</text>
+  
+  </view>
+
+</view>
+
+<view class='bottombtn'>
+
+  <view bindtap='exitfun' style='border-right:4rpx solid #F7F7F7;'>编辑</view>
+
+  <view bindtap='deletefun'>删除</view>
+
+</view>

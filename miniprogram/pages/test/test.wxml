@@ -1,0 +1,175 @@
+<view class='navtop-box'>
+
+  <view class='date'>
+
+    <text class='fontSize-24 color-8C7108 width-80'>{{year}}年</text>
+
+    <view class='date-month'>
+
+      <view class="section">
+
+        <picker mode="date" fields="month" value="{{date}}" start="2015-09-01" end="{{end}}" bindchange="bindDateChange">
+
+          <view>1</view>
+
+        </picker>
+
+      </view>
+
+      <text class='fontSize-46 color-352302'>{{month.length == 1?"0"+month:month}}</text>
+
+      <text class='fontSize-30 color-352302'>月</text>
+
+      <image src='../../images/dsj.png' class='dsj'></image>
+
+    </view>
+
+  </view>
+
+  <view class='income'>
+
+    <text class='fontSize-24 color-8C7108'>当月总收入</text>
+
+    <view class='padding-20-0-0'>
+
+      <text class='fontSize-40 color-352302'>{{s}}</text>
+
+      <text class='fontSize-30 color-352302'>{{r}}</text>
+
+    </view>
+
+  </view>
+
+  <view class='expenditure'>
+
+    <text class='fontSize-24 color-8C7108'>当月总支出</text>
+
+    <view class='padding-20-0-0'>
+
+      <text class='fontSize-40 color-352302'>{{z}}</text>
+
+      <text class='fontSize-30 color-352302'>{{c}}</text>
+
+    </view>
+
+  </view>
+
+</view>
+
+<view style='{{navtopBoxHeight}}'></view>
+
+<block wx:for="{{dataList}}" wx:key="key">
+
+  <view class='dataList-box' wx:if="{{item.dataList.length !== 0}}">
+
+    <view class='date-box'>
+
+      <view class='date-box01'>
+
+        <text>{{item.createdTime}}</text>
+
+      </view>
+
+      <view class='zhichu-box'>
+
+        <view class='date-box02'>
+
+          <text>收入:</text>
+
+          <text>+{{item.shouru}}</text>
+
+        </view>
+
+        <view class='date-box02' style='margin-left:20rpx;'>
+        
+          <text>支出:</text>
+
+          <text>{{item.zhichu}}</text>
+
+        </view>
+
+      </view>
+
+    </view>
+
+    <block wx:for="{{item.dataList}}" wx:key="key" wx:for-item="items" wx:for-index="indexs">
+
+      <view class='record' data-index="{{indexs}}" data-id="{{item._id}}" bindtap='goDetailfun' style='{{indexs !== 2?"border-bottom: 2rpx solid #F7F7F7;":""}}'>
+
+        <view class='record-box01'>
+
+          <image src='{{items.icon}}'></image>
+
+          <text>{{items.remark}}</text>
+
+        </view>
+
+        <view class='price'>{{items.status == 0?"-":"+"}}{{items.prive}}</view>
+
+      </view>
+
+    </block>
+
+  </view>
+
+</block>
+
+<view class='noData' wx:if="{{dataList.length == 0}}">
+
+  <image src='../../images/1.png' class='noData-img' mode='widthFix'></image>
+
+  <view>本月还没有记账</view>
+
+  <view>快去创建你的第一笔账吧~</view>
+
+</view>
+
+<view style='{{BottomBoxHeight}}'></view>
+
+<view class='bottom-box'>
+
+  <view class='bottom-box01'>
+
+    <image src='../../images/add.png' class='addimg' bindtap="addfunc" style='{{addimgStyle}}'></image>
+
+    <view class='text'>记账</view>
+
+  </view>
+
+  <view class='bottom-box02' bindtap="mxfun">
+
+    <image src='{{mximg}}' class='mx'></image>
+
+    <view class='text' style="{{mxStyle}}">明细</view>
+
+  </view>
+
+  <view class='bottom-box03' bindtap="tjfun">
+
+    <image src='{{tjimg}}' class='mx'></image>
+
+    <view class='text' style="{{tjStyle}}">统计</view>
+
+  </view>
+
+</view>
+
+<view class='menu' style='{{menuStyle}}'>
+
+  <view class='menu01' bindtap='srfun'>
+
+    <image src='../../images/sr-h.png' style='width:50rpx; height:50rpx;'></image>
+
+    <text>收入</text>
+
+  </view>
+
+  <view class='menu02' bindtap='zcfun'>
+
+    <image src='../../images/zc-h.png' style='width:50rpx; height:50rpx;'></image>
+
+    <text>支出</text>
+
+  </view>
+
+</view>

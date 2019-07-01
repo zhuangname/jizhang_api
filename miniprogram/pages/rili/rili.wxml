@@ -1,0 +1,74 @@
+
+
+<!-- 
+ * 日历选择组件
+ * 2018-03-04
+ * mehaotian
+ * github ：https://github.com/mehaotian
+ * selected [Arrey] 那些日期被选中
+ * bindselect [function] 日历是否被打开 
+ * bindgetdate [function] 当前选择的日期
+ * is-open [Boolean} 是否开启插入模式
+  -->
+<!-- <view class='other'>我是其他元素</view> -->
+<calendar selected="{{selected}}" bindselect="bindselect" bindgetdate="bindgetdate" />
+
+<scroll-view class="scroll-view-class" scroll-y="true">
+
+  <block wx:for="{{dataList}}" wx:key="key">
+
+    <view class='dataList-box {{active}}' wx:if="{{item.dataList.length !== 0}}">
+
+      <view class='date-box'>
+
+        <view class='date-box01'>
+
+          <text>{{item.createdTime}}</text>
+
+        </view>
+
+        <view class='zhichu-box'>
+
+          <view class='date-box02'>
+
+            <text>收入:</text>
+
+            <text>+{{item.sctotalprice}}</text>
+
+          </view>
+
+          <view class='date-box02' style='margin-left:20rpx;'>
+          
+            <text>支出:</text>
+
+            <text>{{item.zctotalprice}}</text>
+
+          </view>
+
+        </view>
+
+      </view>
+
+      <block wx:for="{{item.dataList}}" wx:key="key" wx:for-item="items" wx:for-index="indexs">
+
+        <view class='record' data-index="{{indexs}}" data-id="{{item._id}}" bindtap='goDetailfun' style='border-bottom: 2rpx solid #F7F7F7;'>
+
+          <view class='record-box01'>
+
+            <image src='{{items.icon}}'></image>
+
+            <text>{{items.remark}}</text>
+
+          </view>
+
+          <view class='price'>{{items.status == 0?"-":"+"}}{{items.prive}}</view>
+
+        </view>
+
+      </block>
+
+    </view>
+
+  </block>
+  
+</scroll-view>

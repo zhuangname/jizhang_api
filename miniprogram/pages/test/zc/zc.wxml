@@ -1,0 +1,49 @@
+<form report-submit="true" bindsubmit="{{formSubmit}}">
+  
+  <block wx:for="{{formData}}" wx:key="key">
+
+    <view class='input-box'>
+    
+      <label style='{{item.labelStyle}}'>{{item.label}}</label>
+
+      <input style='{{item.inputStyle}}' type='{{item.type}}' name="{{item.name}}" data-index="{{index}}" bindinput="{{item.changeEven}}"></input>
+
+    </view>
+
+  </block>
+
+  <view class='input-box'>
+
+    <label style="font-size:26rpx; top:20rpx;">时间</label>
+
+    <picker mode="date" value="{{date}}" start="2015-09-01" end="{{end}}" bindchange="bindDateChange">
+
+      <view class="picker">
+
+      {{date}}
+
+      </view>
+
+    </picker>
+
+  </view>
+
+  <button class='submitbtn' form-type='submit' loading="{{btnlodingstatue}}" type="primary">记账</button>
+
+</form>
+
+<view class='icon-box'>
+
+  <block wx:for="{{iconStatus0}}" wx:key="key"> 
+
+    <view class='icon-box01' data-index="{{index}}" bindtap='imgfun'>
+    
+      <image src='{{item.src}}' style='{{index == idx?"opacity: 1;":""}}'></image>
+
+      <view>{{item.title}}</view>
+    
+    </view>
+
+  </block>
+
+</view>

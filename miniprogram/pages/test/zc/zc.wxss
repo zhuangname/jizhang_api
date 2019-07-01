@@ -1,0 +1,90 @@
+page{
+  background: #f1f1f1;
+}
+
+.input-box{
+  position: relative;
+  background: #fff;
+  padding: 60rpx 0rpx 60rpx 20rpx;
+  font-size: 32rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #f1f1f1;
+}
+
+.input-box label{
+  color: #666;
+  position: absolute;
+  font-size: 32rpx;
+  transition: all .3s;
+}
+
+.input-box input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  padding-left: 20rpx;
+  font-size: 32rpx;
+}
+
+.input-box picker{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.input-box picker .picker{
+  width: 100%;
+  position: absolute;
+  font-size: 32rpx;
+}
+
+.submitbtn{
+  background: #FADA63 !important;
+  color: #fff !important;
+  padding: 40rpx 0 !important;
+  line-height: 0 !important;
+  font-size: 34rpx !important;
+  width: 90%;
+  position: fixed;
+  bottom: 20rpx;
+  left: 50%;
+  margin-left: -337.5rpx;
+}
+
+.icon-box{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  background: #fff;
+}
+
+.icon-box .icon-box01{
+  margin: 20rpx 30rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.icon-box .icon-box01 image{
+  width: 86rpx;
+  height: 86rpx;
+  opacity: .4;
+}
+
+.icon-box .icon-box01 view{
+  padding: 14rpx 0;
+  font-size: 28rpx;
+  color: #666;
+}

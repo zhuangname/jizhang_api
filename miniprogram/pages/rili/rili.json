@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "calendar": "/components/calendar/calendar"
+  },
+  "navigationBarBackgroundColor": "#FADA63"
+}

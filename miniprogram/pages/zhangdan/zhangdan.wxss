@@ -1,0 +1,110 @@
+
+.picker{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 34rpx;
+  padding: 0 30rpx;
+}
+
+.picker .dsj{
+  width: 25rpx;
+  height: 25rpx;
+  margin-left: 10rpx;
+}
+
+.top-box{
+  background: #FADA63;
+  padding: 20rpx 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.top-box .jy{
+  font-size: 24rpx;
+  text-align: center;
+  color: #555;
+}
+
+.top-box .jy-num{
+  text-align: center;
+  padding: 20rpx 0;
+}
+
+.top-box .jy-num .jyq{
+  font-size: 50rpx;
+}
+
+.top-box .jy-num .jyh{
+  font-size: 40rpx;
+}
+
+.top-box .srzc-box{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 10rpx 0;
+}
+
+.top-box .srzc-box .srzc-box01{
+  width: 50%;
+  text-align: center;
+}
+
+.top-box .srzc-box .srzc-box01 .sr,.top-box .srzc-box .srzc-box01 .zc{
+  color: #555;
+  font-size: 24rpx;
+}
+
+.top-box .srzc-box .srzc-box01 .priceq{
+  font-size: 34rpx;
+}
+
+.top-box .srzc-box .srzc-box01 .priceh{
+  font-size: 26rpx;
+}
+
+
+.nav-top-box{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  padding: 10rpx 0;
+  border-bottom: 1rpx solid #f1f1f1;
+  background: #fff;
+}
+
+.nav-top-box text{
+  font-size: 26rpx;
+  color: #555;
+  text-align: center;
+}
+
+.nav-top-box .t1{
+  width: 19%;
+}
+
+.nav-top-box .t2{
+  width: 27%;
+}
+
+.nav-top-box .t3{
+  width: 27%;
+}
+
+.nav-top-box .t4{
+  width: 27%;
+}
+
+.padding-30-0{
+  padding: 30rpx 0!important;
+}
+
+.loading{
+  width: 50%;
+  display: block;
+  margin: auto;
+}

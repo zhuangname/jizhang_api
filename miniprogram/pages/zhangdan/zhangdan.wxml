@@ -1,0 +1,101 @@
+<view class="top-box">
+
+  <view class="section">
+
+    <picker mode="date" fields="year" value="{{date}}" start="2015" end="{{end}}" bindchange="bindDateChange">
+
+      <view class="picker">
+
+      {{date}}年
+
+      <image src="/images/dsj.png" class="dsj"></image>
+
+      </view>
+
+    </picker>
+
+  </view>
+
+  <view class="jy">结余</view>
+
+  <view class="jy-num">
+  
+    <text class="jyq">{{yearTotalPrice.jyq}}</text>
+
+    <text>.</text>
+
+    <text class="jyh">{{yearTotalPrice.jyh}}</text>
+
+  </view>
+
+  <view class="srzc-box">
+  
+    <view class="srzc-box01" style="border-right:1rpx solid #555;">
+    
+      <text class="sr">收入 </text>
+      
+      <text class="priceq">{{yearTotalPrice.sryearTotalq}}</text>
+
+      <text>.</text>
+
+      <text class="priceh">{{yearTotalPrice.sryearTotalh}}</text>
+    
+    </view>
+
+   <view class="srzc-box01">
+    
+      <text class="zc">支出 </text>
+      
+      <text class="priceq">{{yearTotalPrice.zcyearTotalq}}</text>
+
+      <text>.</text>
+
+      <text class="priceh">{{yearTotalPrice.zcyearTotalh}}</text>
+    
+    </view>
+  
+  </view>
+
+</view>
+
+<view style="{{navtopBoxHeight}}"></view>
+
+<view>
+
+  <view class="nav-top-box" style="{{nabtopboxStyle}}">
+  
+    <text class="t1">月份</text>
+
+    <text class="t2">收入</text>
+
+    <text class="t3">支出</text>
+
+    <text class="t4">结余</text>
+  
+  </view>
+
+  <view style="{{h}}"></view>
+
+  <block wx:for="{{dataList}}" wx:key="key">
+
+    <view class="nav-top-box padding-30-0" data-month="{{item[0].year}}" bindtap="detailfun">
+    
+      <text class="t1">{{item[0].year}}月</text>
+
+      <text class="t2">{{item[0].srtotalprice}}</text>
+
+      <text class="t3">{{item[0].zctotalprice}}</text>
+
+      <text class="t4">{{item[0].jytotalprice}}</text>
+    
+    </view>
+
+  </block>
+
+</view>
+
+<view>
+
+  <image src="/images/timg.gif" class="loading" mode="widthFix" hidden="{{loadingStatus}}"></image>
+
+</view>
