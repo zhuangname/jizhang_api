@@ -1,0 +1,65 @@
+<view class="navtop-big-box">
+
+  <view class='navtop'>
+
+    <view class='navtop01 {{active01}}' bindtap='shourufun'>月</view>
+
+    <view class='navtop02 {{active02}}' bindtap='zhichufun'>年</view>
+
+  </view>
+
+</view>
+
+<view style="height:168rpx;"></view>
+
+<view class="time-zc-sr">
+
+  <view class="section">
+
+    <picker mode="date" fields="month" value="{{date}}" start="2015-09-01" end="{{end}}" bindchange="bindDateChange">
+
+      <view class="picker">
+
+        {{date}}
+
+      </view>
+
+    </picker>
+
+  </view>
+
+  <view class="zc-sr-box">
+  
+    <view>收入：{{sr}}</view>
+
+    <view>支出：{{zc}}</view>
+
+  </view>
+
+</view>
+
+<view class="zcphb">排行榜</view>
+
+<block wx:for="{{listData}}" wx:key="key">
+
+  <view class="list-data">
+
+    <image src="{{item.icon}}" class="icon"></image>
+
+    <view class="right-info">
+    
+      <view class="remake-price-box">
+      
+        <view class="remake">{{item.remark}}</view>
+
+        <view class="price">{{item.prive}}元</view>
+      
+      </view>
+
+      <view class="time">{{item.createdTime}}</view>
+    
+    </view>
+
+  </view>
+
+</block>

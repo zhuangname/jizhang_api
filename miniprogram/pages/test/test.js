@@ -9,6 +9,18 @@ var query;
 Page({
 
   data: {
+    
+    shuaixuanimg:[
+      { "img": "../../images/mr.png", "text": "默认" },
+      { "img": "../../images/cy.png", "text": "餐饮" },
+      { "img": "../../images/fs.png", "text": "服饰" },
+      { "img": "../../images/gw.png", "text": "购物" },
+      { "img": "../../images/jt.png", "text": "交通" },
+      { "img": "../../images/yj.png", "text": "烟酒" },
+      { "img": "../../images/yl.png", "text": "娱乐" },
+      { "img": "../../images/gz.png", "text": "工资" },
+      { "img": "../../images/qt.png", "text": "其他" },
+    ],
 
     dataList: [],   //数据
 
@@ -35,16 +47,12 @@ Page({
     mximg:'../../images/rl-h.png',
 
     mxStyle:'',
+
+    stopPageScroll:''
     
   },
 
   onReady() {
-
-    wx.createSelectorQuery().selectAll(".navtop-box").boundingClientRect(function (res) {
-
-      that.setData({ navtopBoxHeight: "height:" + res[0].height + "px;" })
-
-    }).exec();
 
     wx.createSelectorQuery().selectAll(".bottom-box").boundingClientRect(function (res) {
 
@@ -354,5 +362,30 @@ Page({
     wx.navigateTo({ url: '../zhangdan/zhangdan' })
 
   },
+
+  shuaixuanfun(){
+
+    this.setData({ stopPageScroll: "stopPageScroll", shuaixuanboxBottom:'bottom:0' })
+
+  },
+
+  close(){
+
+    this.setData({ stopPageScroll: '', shuaixuanboxBottom: 'bottom:-100%' })
+
+    console.log("执行")
+
+  },
+
+
+  goimgfun(e){
+    console.log(e.currentTarget.dataset.img)
+    wx.navigateTo({
+      url: '../iconListData/iconListData?img=' + e.currentTarget.dataset.img,
+    })
+    this.setData({ stopPageScroll: '', shuaixuanboxBottom: 'bottom:-100%' })
+  },
+
+  stopPageScroll() { return }
 
 })

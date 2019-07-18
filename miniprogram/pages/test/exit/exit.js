@@ -306,6 +306,8 @@ Page({
 
             var prevPage4 = pages[pages.length - 4];
 
+            console.log(prevPage)
+
             if (prevPage4 !== undefined) prevPage4.getDataList();
 
             prevPage.getDataList(that.data.options.createdTime);
@@ -365,6 +367,8 @@ Page({
             var prevPage4 = pages[pages.length - 4];
 
             if (prevPage4 !== undefined) prevPage4.getDataList(); 
+
+            console.log(prevPage)
 
             prevPage.getDataList(that.data.options.createdTime);
 

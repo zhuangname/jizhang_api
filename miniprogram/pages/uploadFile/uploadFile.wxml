@@ -1,0 +1,3 @@
+<view bindtap="uploadFile">上传</view>
+
+<image src="{{img}}"></image>

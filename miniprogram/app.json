@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/test/test",
+    "pages/iconListData/iconListData",
+    "pages/uploadFile/uploadFile",
     "pages/mobantesst/mobantesst",
     "pages/rili/rili",
     "pages/zhangdan/zhangdan",

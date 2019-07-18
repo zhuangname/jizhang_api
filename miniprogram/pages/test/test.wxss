@@ -14,6 +14,7 @@ page{
   position: fixed;
   top: 0;
   box-shadow: 0 10px 30px rgba(250,218,99,.4);
+  height: 110rpx;
 }
 
 .navtop-box .date{
@@ -56,6 +57,17 @@ page{
   display: flex;
   flex-direction:column;
   width: 34%;
+}
+
+.navtop-box .shaixuan-box{
+  display: flex;
+  flex-direction:column;
+  width: 14%;
+  justify-content: center;
+}
+
+.navtop-box .shaixuan-box image{
+  width: 60%;
 }
 
 .dataList-box{
@@ -288,4 +300,41 @@ page{
 
 .color-352302{
   color: #352302
+}
+
+.shuaixuan-img-box{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  background: #fff;
+  z-index: 999;
+  transition: all .3s;
+}
+
+.shuaixuan-box{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+}
+
+.img-text{
+  text-align: center;
+  margin:20rpx 22rpx;
+  font-size: 28rpx;
+}
+.img-text image{
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.close{
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  left: 50%;
+  margin-left: -20rpx;
+  bottom: 20rpx;
 }

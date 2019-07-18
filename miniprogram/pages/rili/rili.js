@@ -129,8 +129,8 @@ Page({
   getDataList(createdTime){
 
     console.log(createdTime)
-
     
+    this.getAllDataList();
 
   },
 

@@ -1,5 +1,4 @@
 <view class='navtop'>
-  <!-- <block></block> -->
 
   <view class='navtop01 {{active01}}' bindtap='shourufun'>收入</view>
 

@@ -37,10 +37,39 @@ var getTime = function(){
 };
 
 
+var getTimes = function(stat){
 
-/**
-         * 判断是否为当月的最后一天
-         */
+  var year = new Date().getFullYear();
+
+  var month = (new Date().getMonth() + 1).toString().length == 1 ? "0" + (new Date().getMonth() + 1).toString() : (new Date().getMonth() + 1).toString();
+
+  var date = (new Date().getDate()).toString().length == 1 ? "0" + (new Date().getDate()).toString() : (new Date().getDate()).toString()
+
+  var day = new Date().getDay() == 0 ? "星期日" : new Date().getDay() == 1 ? "星期一" : new Date().getDay() == 2 ? "星期二" : new Date().getDay() == 3 ? "星期三" : new Date().getDay() == 4 ? "星期四" : new Date().getDay() == 5 ? "星期五" : "星期六";
+
+  if (stat == "年月日星期") {
+
+    let str = year + "-" + month + "-" + date + " " + day;
+
+    return str;
+
+  } else if (stat == "年月日") {
+
+    let str = year + "-" + month + "-" + date
+
+    return str;
+
+  } else {
+
+    let str = year + "-" + month;
+
+    return str;
+
+  }
+
+};
+
+
 var isLastDayOfMonth = function() {
   var flag = new Boolean(false);
   var date = new Date();
@@ -71,6 +100,8 @@ module.exports = {
   oneDay,
 
   getTime,
+
+  getTimes,
 
   isLastDayOfMonth
   
