@@ -89,7 +89,7 @@ Page({
       }
 
 
-      for(var i=1; i<listData.length; i++){
+      for(var i=1; i<listData.length; i++){  //大到小排序
 
         var item = listData[i];
         var j = i-1;
