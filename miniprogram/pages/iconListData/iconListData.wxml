@@ -52,7 +52,7 @@
       
         <view class="remake">{{item.remark}}</view>
 
-        <view class="price">{{item.prive}}元</view>
+        <view class="price">{{item.status==1?"+":"-"}}{{item.prive}}元</view>
       
       </view>
 

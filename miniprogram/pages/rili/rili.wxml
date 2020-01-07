@@ -13,7 +13,7 @@
 <!-- <view class='other'>我是其他元素</view> -->
 <calendar selected="{{selected}}" bindselect="bindselect" bindgetdate="bindgetdate" />
 
-<scroll-view class="scroll-view-class" scroll-y="true">
+<scroll-view class="scroll-view-class" scroll-y="true" wx:if="{{dataList.length !==0 && dataList[0].dataList.length !== 0}}">
 
   <block wx:for="{{dataList}}" wx:key="key">
 
@@ -70,5 +70,12 @@
     </view>
 
   </block>
-  
+
 </scroll-view>
+
+<view  wx:if="{{dataList.length ==0 || dataList[0].dataList.length == 0}}">
+  <image src="/images/1.png" class="nodata"></image>
+  <view style="text-align:center;">今天还没有记账</view>
+  <!-- <view class="createorder">创建一笔账单</view> -->
+</view>
+  

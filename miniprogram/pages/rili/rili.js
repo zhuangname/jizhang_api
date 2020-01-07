@@ -104,7 +104,9 @@ Page({
 
       };
 
-      setTimeout(() => { that.setData({ active: 'active' }) }, 300)
+      setTimeout(() => { that.setData({ active: 'active' }) }, 300);
+
+      console.log(this.data.dataList)
 
     }).catch(err => { console.log(err); wx.hideLoading(); })
 
@@ -157,9 +159,9 @@ Page({
 
         var obj = {};
 
-        obj.date = data[i].createdTime
+        obj.date = data[i].createdTime;
 
-        selected.push(obj);
+        if (data[i].dataList.length !== 0) selected.push(obj);
 
       }
 

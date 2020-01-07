@@ -85,3 +85,20 @@ page{
   padding-right: 30rpx;
   color: #352302;
 }
+
+.nodata{
+  width: 70%;
+  margin: 40rpx auto 20rpx;
+  display: block;
+}
+
+.createorder{
+  width: 30%;
+  margin: 30rpx auto;
+  padding: 20rpx 0;
+  border-radius: 15rpx;
+  background: #FADA63;
+  color: #fff;
+  text-align: center;
+  font-size: 30rpx;
+}
